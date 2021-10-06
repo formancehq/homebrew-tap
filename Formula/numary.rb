@@ -5,24 +5,24 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "0.1.0"
+  version "0.1.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_macOS-ARM64.tar.gz"
-      sha256 "fba91d0f2935719efffa5a08ef3e69c9fd9515c27242315307e7b5cf60728d62"
+      url "https://github.com/numary/ledger/releases/download/0.1.2/numary_0.1.2_macOS-ARM64.tar.gz"
+      sha256 "a436a8e59b0d2698dca0257d9492d4c5633c264af2777e74318865366d9bf51d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_macOS-64bit.tar.gz"
-      sha256 "dbed8804dd4f9b26cddb7e322c5d9907657a3c7269edf92194f09ef47e6a9a9e"
+      url "https://github.com/numary/ledger/releases/download/0.1.2/numary_0.1.2_macOS-64bit.tar.gz"
+      sha256 "6d675e5de34a717f881ff5ad05160f4849b1b4107db24717e7b31d827d76526d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_Linux-64bit.tar.gz"
-      sha256 "d5f6dcaa801026955fd52720a0dcd2062264bd84533ccd6e05c547da18d3c864"
+      url "https://github.com/numary/ledger/releases/download/0.1.2/numary_0.1.2_Linux-64bit.tar.gz"
+      sha256 "a386b86eaabf7ff91d3acb74a3cf6dae8076384e4bdb3f4a00a90beb81504570"
     end
   end
 
