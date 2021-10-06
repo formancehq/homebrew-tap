@@ -7,12 +7,22 @@ class Numary < Formula
   homepage "https://numary.com"
   version "0.1.0"
   bottle :unneeded
-  depends_on :macos
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_macOS-ARM64.tar.gz"
+      sha256 "fba91d0f2935719efffa5a08ef3e69c9fd9515c27242315307e7b5cf60728d62"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/0.1.0/ledger_0.1.0_darwin_amd64.tar.gz"
-      sha256 "d2594e6801b0917068e9349a8a0d3b6e9acfa330fd45fa993adc3fba5ccc6d1c"
+      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_macOS-64bit.tar.gz"
+      sha256 "dbed8804dd4f9b26cddb7e322c5d9907657a3c7269edf92194f09ef47e6a9a9e"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/numary/ledger/releases/download/0.1.0/numary_0.1.0_Linux-64bit.tar.gz"
+      sha256 "d5f6dcaa801026955fd52720a0dcd2062264bd84533ccd6e05c547da18d3c864"
     end
   end
 
