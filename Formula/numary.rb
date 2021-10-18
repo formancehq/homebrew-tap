@@ -11,18 +11,18 @@ class Numary < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/numary/ledger/releases/download/1.0.0-beta.9/numary_1.0.0-beta.9_macOS-ARM64.tar.gz"
-      sha256 "5ec7523ff753a8a93dd5dc1d861e078cc55083645cd95180503bb7ade52395f2"
+      sha256 "b5759cff79b380c9672258c511e8332799a34d6060c8f6744b31c4c5f1320ee4"
     end
     if Hardware::CPU.intel?
       url "https://github.com/numary/ledger/releases/download/1.0.0-beta.9/numary_1.0.0-beta.9_macOS-64bit.tar.gz"
-      sha256 "ebb707ff513ef43e0c4136987dca54a234bc99e651edefcc51e5c265be1dcfbf"
+      sha256 "66290aa9ba99ba9a12759a899a5450c37cb5bfee6398f73afaf852ccccacbd36"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/numary/ledger/releases/download/1.0.0-beta.9/numary_1.0.0-beta.9_Linux-64bit.tar.gz"
-      sha256 "db39360743ee87b7ba38f61c63a551fd4ae752d6423f5ea46b19f6704f70350b"
+      sha256 "63b1b59a0f8eb6a7519a1d9b792d8efe33add729f19f1cf27f4243865c97b70b"
     end
   end
 
