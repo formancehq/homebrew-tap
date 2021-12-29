@@ -5,20 +5,20 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "1.0.0-beta.19"
+  version "1.0.0-beta.20"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.19/numary_1.0.0-beta.19_macOS-ARM64.tar.gz"
-      sha256 "844f1bbe300f3ee9db50776cda9e764318bc68d41a42e4a11de90795b6ad481f"
+      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.20/numary_1.0.0-beta.20_macOS-ARM64.tar.gz"
+      sha256 "bb8c4cf638b528a97aa98fbd675cdbc4ff6b5ceecd7ac32114b909a7c668753f"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.19/numary_1.0.0-beta.19_macOS-64bit.tar.gz"
-      sha256 "2dfe6c22398b8583ea01aa71c8727e5ee982af18950fe311f110a537837a976e"
+      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.20/numary_1.0.0-beta.20_macOS-64bit.tar.gz"
+      sha256 "75705062e05205dc67d3cb2daa2314eba1299b9ee6177b2807e301ff3165c7e1"
 
       def install
         bin.install "numary"
@@ -28,8 +28,8 @@ class Numary < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.19/numary_1.0.0-beta.19_Linux-64bit.tar.gz"
-      sha256 "c21a80f60a18d1af041f2ca82fdff7bd962906f9fc45ecb126336af85d0151fa"
+      url "https://github.com/numary/ledger/releases/download/1.0.0-beta.20/numary_1.0.0-beta.20_Linux-64bit.tar.gz"
+      sha256 "8cb8503f6dd50c8e9e53d7f6bc3e309a1b0d6ea85b6d6293262ca2ae133a58dc"
 
       def install
         bin.install "numary"
