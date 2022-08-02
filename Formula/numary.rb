@@ -5,20 +5,20 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "1.6.1"
+  version "1.7.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/numary/ledger/releases/download/v1.6.1/numary_1.6.1_macOS-ARM64.tar.gz"
-      sha256 "6023479b8932a73cbd5821877cbcdcb46067a2eac320488b3643de85732db1c7"
+      url "https://github.com/numary/ledger/releases/download/v1.7.0/numary_1.7.0_macOS-ARM64.tar.gz"
+      sha256 "e5dacc268279de2d13ef604fedb0bb51a6be1c2bc3be0b6c07807e4fb0c14c95"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/v1.6.1/numary_1.6.1_macOS-64bit.tar.gz"
-      sha256 "bef80ae8aecc37cad62e66d0af476ec62410168da3b5b8a21ab540304d0ddfd4"
+      url "https://github.com/numary/ledger/releases/download/v1.7.0/numary_1.7.0_macOS-64bit.tar.gz"
+      sha256 "d9e2ad8dde0a0f7b2f368ceea14db2786059d8c20763c07a456c2fe48e9f9f74"
 
       def install
         bin.install "numary"
@@ -28,16 +28,16 @@ class Numary < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/v1.6.1/numary_1.6.1_Linux-64bit.tar.gz"
-      sha256 "5ccd7dda4f781c217995af75ecf4c855d13b84abb33e5063e999c8a6036a82d0"
+      url "https://github.com/numary/ledger/releases/download/v1.7.0/numary_1.7.0_Linux-64bit.tar.gz"
+      sha256 "c0d712dc6e831170431cd4fa62b179f12e144a8a968c6bb49894e43cebd6f611"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/numary/ledger/releases/download/v1.6.1/numary_1.6.1_Linux-ARM64.tar.gz"
-      sha256 "a8c7af74a91b7137492ed84fd534a0ad14d0f62d4d2209295d3f77b172f65d83"
+      url "https://github.com/numary/ledger/releases/download/v1.7.0/numary_1.7.0_Linux-ARM64.tar.gz"
+      sha256 "1c95c3601c465960655caf8814c90c6a9a3355da231cde83e3c1beb3f13a3b19"
 
       def install
         bin.install "numary"
