@@ -5,20 +5,20 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "1.7.1"
+  version "1.7.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/numary/ledger/releases/download/v1.7.1/numary_1.7.1_macOS-ARM64.tar.gz"
-      sha256 "570c0ec81dc79c0bdc2af8640491821b677fdcd79d43ae86680d79fb741f3715"
+    if Hardware::CPU.intel?
+      url "https://github.com/numary/ledger/releases/download/v1.7.2/numary_1.7.2_macOS-64bit.tar.gz"
+      sha256 "6cc029e557a2b3b51234865dd57eeed0996bdff971bbf2d6a827e123307ae322"
 
       def install
         bin.install "numary"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/v1.7.1/numary_1.7.1_macOS-64bit.tar.gz"
-      sha256 "2257e7154e5c0179d5d9e31a8a861aa057c0fe419ae1320526dcd088e34f2c4c"
+    if Hardware::CPU.arm?
+      url "https://github.com/numary/ledger/releases/download/v1.7.2/numary_1.7.2_macOS-ARM64.tar.gz"
+      sha256 "0c4dfdfccdec558ca080210b58799462d9b7560a60c3eac6ce659537c7f704aa"
 
       def install
         bin.install "numary"
@@ -28,16 +28,16 @@ class Numary < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/numary/ledger/releases/download/v1.7.1/numary_1.7.1_Linux-64bit.tar.gz"
-      sha256 "b4d6a77c3398815b5f20c15c8f5272124ab828b3f79a70397e036c923567a9f7"
+      url "https://github.com/numary/ledger/releases/download/v1.7.2/numary_1.7.2_Linux-64bit.tar.gz"
+      sha256 "5cf777f236e3cca49aa841a423cf7a799f607a674922447e3eb323aed6ef8c14"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/numary/ledger/releases/download/v1.7.1/numary_1.7.1_Linux-ARM64.tar.gz"
-      sha256 "11f2a142f1b297a87294e67668fb9b00232d0253da525bcfad31229ac985cd0d"
+      url "https://github.com/numary/ledger/releases/download/v1.7.2/numary_1.7.2_Linux-ARM64.tar.gz"
+      sha256 "4b6789fe0810f6407820620d9b1c772de1e4476a71fbbedfe3c22edc6a5b0e3f"
 
       def install
         bin.install "numary"
