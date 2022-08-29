@@ -5,20 +5,20 @@
 class Payments < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/numary/payments/releases/download/v0.1.2/payments_darwin-arm64.tar.gz"
-      sha256 "2c26e3db4bf5e440dd267ea0b93eecc4852d3758aede2c0258a821dc8513e16d"
+    if Hardware::CPU.intel?
+      url "https://github.com/numary/payments/releases/download/v0.1.3/payments_darwin-amd64.tar.gz"
+      sha256 "f7f4fcd9d41fdfc0256e5ca71d043dcc17ac71f9794ca1824cb36cb39e4ab5c1"
 
       def install
         bin.install "payments"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/numary/payments/releases/download/v0.1.2/payments_darwin-amd64.tar.gz"
-      sha256 "e65b4bacae8075156c3278ce06f62b1dd204fc58793aaecd785a97c1a83c2339"
+    if Hardware::CPU.arm?
+      url "https://github.com/numary/payments/releases/download/v0.1.3/payments_darwin-arm64.tar.gz"
+      sha256 "d25a032043b38bc8704f08c6183b83917cbfff399d3299d60677fdc6366886d9"
 
       def install
         bin.install "payments"
@@ -27,17 +27,17 @@ class Payments < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/numary/payments/releases/download/v0.1.2/payments_linux-amd64.tar.gz"
-      sha256 "73f85d10086105f5efda840e7015abed1d9713eec564243ad79ea665965126b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/numary/payments/releases/download/v0.1.3/payments_linux-arm64.tar.gz"
+      sha256 "fd38aec9dc34c2c8dd69914a5b11e363c5643e509e2fad1610e2234132c6aeed"
 
       def install
         bin.install "payments"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/numary/payments/releases/download/v0.1.2/payments_linux-arm64.tar.gz"
-      sha256 "ca13510c19d058f04d9ce5768ea6a18b3940768239f3c5232f45db1a13f20cba"
+    if Hardware::CPU.intel?
+      url "https://github.com/numary/payments/releases/download/v0.1.3/payments_linux-amd64.tar.gz"
+      sha256 "4073bff3065eea5dcbfb6d538191ed6a4d71ee3c5fe59faca6fcd43ce836f7ee"
 
       def install
         bin.install "payments"
