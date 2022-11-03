@@ -5,20 +5,20 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "1.7.5"
+  version "1.7.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.5/numary_1.7.5_macOS-64bit.tar.gz"
-      sha256 "47347b67b63020346f76f45f47878c706e27ba925675e5c1cd4c9dc690c8e79e"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_macOS-64bit.tar.gz"
+      sha256 "5dab6682b22ff38605a4435485672a3746d092f0ac942e8e472e600f9fddc29b"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.5/numary_1.7.5_macOS-ARM64.tar.gz"
-      sha256 "7a871daa3395d9b35fb56dac25b974ceed113a86181f4e1965a64ad30747a198"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_macOS-ARM64.tar.gz"
+      sha256 "7941e28b7481e2386b95bdc2637c0ac69e90d910ee73e06ac8c1b8ff78e4805f"
 
       def install
         bin.install "numary"
@@ -27,17 +27,17 @@ class Numary < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.5/numary_1.7.5_Linux-64bit.tar.gz"
-      sha256 "bd6376c28c4a17cbd8ae9498113267bb8dbf31f9481cbfec9d94768f6d87b572"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_Linux-ARM64.tar.gz"
+      sha256 "90e1d01199ea17fb54590c0da7ebdca0315cd9ac6cfc3a5df84e340692319611"
 
       def install
         bin.install "numary"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.5/numary_1.7.5_Linux-ARM64.tar.gz"
-      sha256 "81946309a615d4b5700f827999520b5f049bdb23482878d2c266c78e6cdf90c3"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_Linux-64bit.tar.gz"
+      sha256 "8b7bff33fc2e2293827492d53d4f66a9558f7972ce22c481ca78549edc435680"
 
       def install
         bin.install "numary"
