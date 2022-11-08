@@ -5,20 +5,20 @@
 class Auth < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.1/auth_darwin-amd64.tar.gz"
-      sha256 "6909c69810864ac61564c815aee3282b8533a36e2f8eb2b79cca48e45129e7e4"
+      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_darwin-amd64.tar.gz"
+      sha256 "9de9bd82099bc59a91ab2025f2e3ea701c43942bbeb48706dabdb5e23c507c75"
 
       def install
         bin.install "auth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.1/auth_darwin-arm64.tar.gz"
-      sha256 "86736d04b41ce61e50e31458325f923cd851baefc2a44ae979bd5d798cb9b503"
+      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_darwin-arm64.tar.gz"
+      sha256 "1e540e54ab669c5980abee3d62fd3f42b4add65affab33199673d7df91de17aa"
 
       def install
         bin.install "auth"
@@ -28,16 +28,16 @@ class Auth < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.1/auth_linux-arm64.tar.gz"
-      sha256 "9f67a09184bb5822f007012a989dd1bdb0b4574144ed108066f1571b96f0a4f9"
+      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_linux-arm64.tar.gz"
+      sha256 "33f55109f206df2dd5a1b3dbdd153d3dd01e68ed5ba6fbb308b8a18b93d9b670"
 
       def install
         bin.install "auth"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.1/auth_linux-amd64.tar.gz"
-      sha256 "c43f93af11f726f52b3e58149d9b8f23b6961f864bd0d74cb2339ff07bd9ef8c"
+      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_linux-amd64.tar.gz"
+      sha256 "6a116443b9d389d6807c7dd908cb4e8c1887c63483cd5a609e9400acf17a2bbc"
 
       def install
         bin.install "auth"
