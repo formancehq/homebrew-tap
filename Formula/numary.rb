@@ -5,20 +5,20 @@
 class Numary < Formula
   desc ""
   homepage "https://numary.com"
-  version "1.7.6"
+  version "1.7.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_macOS-64bit.tar.gz"
-      sha256 "5dab6682b22ff38605a4435485672a3746d092f0ac942e8e472e600f9fddc29b"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.7/numary_1.7.7_macOS-64bit.tar.gz"
+      sha256 "98959faaef231f7f53dc255ecc2cd8e9df3e948480404cc0de79720a60513464"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_macOS-ARM64.tar.gz"
-      sha256 "7941e28b7481e2386b95bdc2637c0ac69e90d910ee73e06ac8c1b8ff78e4805f"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.7/numary_1.7.7_macOS-ARM64.tar.gz"
+      sha256 "9f66371f34b205171cd550d8eb5a3fc7eb9495702ebec14f8c6cb9f368838b86"
 
       def install
         bin.install "numary"
@@ -28,16 +28,16 @@ class Numary < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_Linux-ARM64.tar.gz"
-      sha256 "90e1d01199ea17fb54590c0da7ebdca0315cd9ac6cfc3a5df84e340692319611"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.7/numary_1.7.7_Linux-ARM64.tar.gz"
+      sha256 "a9c25fc5605ede44c295450726f9f4428d0267efd1b85ef80a75c9a7257e0786"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.7.6/numary_1.7.6_Linux-64bit.tar.gz"
-      sha256 "8b7bff33fc2e2293827492d53d4f66a9558f7972ce22c481ca78549edc435680"
+      url "https://github.com/formancehq/ledger/releases/download/v1.7.7/numary_1.7.7_Linux-64bit.tar.gz"
+      sha256 "7c77c676d858cefd54fb2d9cef31f4f2d730e474cbb6fe4870eb362e80621b2e"
 
       def install
         bin.install "numary"
