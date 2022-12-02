@@ -5,20 +5,20 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.0/fctl_darwin-amd64.tar.gz"
-      sha256 "c2ddb385d76d49045e1c3fd05bb0a712152172a3bb8bdd7421b942f52a5781ce"
+    if Hardware::CPU.arm?
+      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_darwin-arm64.tar.gz"
+      sha256 "6282ddba45f04b3830224da710be47bbe9d25c22eded7ce04f9138594a7b1165"
 
       def install
         bin.install "fctl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.0/fctl_darwin-arm64.tar.gz"
-      sha256 "04cd5a93643b9776695cc8de728f06cf2da94a6f4bd14c102d2ae96c86ab23da"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_darwin-amd64.tar.gz"
+      sha256 "bf131f7ccc6258f781b085594adddf60a0aae8a59ee0311951fe627407d4497c"
 
       def install
         bin.install "fctl"
@@ -28,16 +28,16 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.0/fctl_linux-arm64.tar.gz"
-      sha256 "21577c1f96c804ea0a7ff99f5a6b9f473dcd0be97b226467d43b4b108349b801"
+      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_linux-arm64.tar.gz"
+      sha256 "1e60d303ff443e6fe5f57ab6f18ae9aa5c221be919f6782518a0c808b1448b54"
 
       def install
         bin.install "fctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.0/fctl_linux-amd64.tar.gz"
-      sha256 "dc71f9e9d9a0e1fc7b47e6ada0b6b5648f0a3e21449c3467d58312dc1492a6a1"
+      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_linux-amd64.tar.gz"
+      sha256 "4266ef02c6127995d2e962b5dec4ab85da2886bfdf35571000bf7e2d5d554081"
 
       def install
         bin.install "fctl"
