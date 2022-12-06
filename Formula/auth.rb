@@ -5,20 +5,20 @@
 class Auth < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_darwin-amd64.tar.gz"
-      sha256 "9de9bd82099bc59a91ab2025f2e3ea701c43942bbeb48706dabdb5e23c507c75"
+    if Hardware::CPU.arm?
+      url "https://github.com/formancehq/auth/releases/download/v0.2.3/auth_darwin-arm64.tar.gz"
+      sha256 "c040778e90289fd65eb2c18d5add5beb3e85b477c757b7b6edda614d7b3cd568"
 
       def install
         bin.install "auth"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_darwin-arm64.tar.gz"
-      sha256 "1e540e54ab669c5980abee3d62fd3f42b4add65affab33199673d7df91de17aa"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/auth/releases/download/v0.2.3/auth_darwin-amd64.tar.gz"
+      sha256 "aa8355367b6845aa252d84aeb996b9186a94bb748fc571911947f67b0bd80982"
 
       def install
         bin.install "auth"
@@ -27,17 +27,17 @@ class Auth < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_linux-arm64.tar.gz"
-      sha256 "33f55109f206df2dd5a1b3dbdd153d3dd01e68ed5ba6fbb308b8a18b93d9b670"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/auth/releases/download/v0.2.3/auth_linux-amd64.tar.gz"
+      sha256 "b83a3b2364d66e00e2ca7b7d6b73b689b1bf3316da922f1804f7f93b57baa438"
 
       def install
         bin.install "auth"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/auth/releases/download/v0.2.2/auth_linux-amd64.tar.gz"
-      sha256 "6a116443b9d389d6807c7dd908cb4e8c1887c63483cd5a609e9400acf17a2bbc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/auth/releases/download/v0.2.3/auth_linux-arm64.tar.gz"
+      sha256 "55b900aa997b25723f845e938485af5b1435ed434d5259777f1bd6ec1496e91f"
 
       def install
         bin.install "auth"
