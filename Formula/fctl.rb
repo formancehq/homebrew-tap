@@ -5,20 +5,20 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.5.1"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_darwin-arm64.tar.gz"
-      sha256 "6282ddba45f04b3830224da710be47bbe9d25c22eded7ce04f9138594a7b1165"
+      url "https://github.com/formancehq/fctl/releases/download/v0.6.0/fctl_darwin-arm64.tar.gz"
+      sha256 "8dae01bd0aebcfd1c05039c4ded08e6470bdfc84c29c7e02952f6ebc1f2fe70c"
 
       def install
         bin.install "fctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_darwin-amd64.tar.gz"
-      sha256 "bf131f7ccc6258f781b085594adddf60a0aae8a59ee0311951fe627407d4497c"
+      url "https://github.com/formancehq/fctl/releases/download/v0.6.0/fctl_darwin-amd64.tar.gz"
+      sha256 "526b2418e79091ad7b9086f2a2cb6d4be536650111bf4f1cdfa0273e91cc15b7"
 
       def install
         bin.install "fctl"
@@ -28,16 +28,16 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_linux-arm64.tar.gz"
-      sha256 "1e60d303ff443e6fe5f57ab6f18ae9aa5c221be919f6782518a0c808b1448b54"
+      url "https://github.com/formancehq/fctl/releases/download/v0.6.0/fctl_linux-arm64.tar.gz"
+      sha256 "66eed73f6d952e71fe87565a33968c5ed94c54bd1d5873026c0bae130f3c5636"
 
       def install
         bin.install "fctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.5.1/fctl_linux-amd64.tar.gz"
-      sha256 "4266ef02c6127995d2e962b5dec4ab85da2886bfdf35571000bf7e2d5d554081"
+      url "https://github.com/formancehq/fctl/releases/download/v0.6.0/fctl_linux-amd64.tar.gz"
+      sha256 "6d8a22661a8df73a74d33ff8c8cc10348b3833d16b8380a29057f2322bce1eb7"
 
       def install
         bin.install "fctl"
