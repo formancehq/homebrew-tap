@@ -5,20 +5,20 @@
 class Payments < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.3.0/payments_darwin-amd64.tar.gz"
-      sha256 "b96391c7fb38a70adbbf5f556618633ec00c6ebc182d2e8b18e155bca4a5721c"
+      url "https://github.com/formancehq/payments/releases/download/v0.3.1/payments_darwin-amd64.tar.gz"
+      sha256 "015bbd7d71e02412e71b87cf184be968704c5bef05cd632324eeba34b8bd97af"
 
       def install
         bin.install "payments"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/payments/releases/download/v0.3.0/payments_darwin-arm64.tar.gz"
-      sha256 "e0afa5790fb3d2a6f572e11ca57fcddb7b8eed38579dfc347503ae8bd0f57ed7"
+      url "https://github.com/formancehq/payments/releases/download/v0.3.1/payments_darwin-arm64.tar.gz"
+      sha256 "ce9c608784e957c809555d43a68ab8131d2d97974f6d12aa14955c929b18ad4a"
 
       def install
         bin.install "payments"
@@ -28,16 +28,16 @@ class Payments < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/payments/releases/download/v0.3.0/payments_linux-arm64.tar.gz"
-      sha256 "eec73c6c510adf71626daaa4ff207bb71caeddf1e7828adc7b20eddded591847"
+      url "https://github.com/formancehq/payments/releases/download/v0.3.1/payments_linux-arm64.tar.gz"
+      sha256 "68c6e8ff1b7f3ebb9e9ccd8842e25cc48893f759ecd41bec426bc12d8b93b962"
 
       def install
         bin.install "payments"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.3.0/payments_linux-amd64.tar.gz"
-      sha256 "9c09d8bb612eae41b20a51b76028e979b0aa8f7a38f28124dd5448ddef8f3355"
+      url "https://github.com/formancehq/payments/releases/download/v0.3.1/payments_linux-amd64.tar.gz"
+      sha256 "6e5363fc7de2648deb68e84451c54b8188c2c7aa88e23f4624540996d3def516"
 
       def install
         bin.install "payments"
