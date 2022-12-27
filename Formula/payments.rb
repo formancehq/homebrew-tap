@@ -5,20 +5,20 @@
 class Payments < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.0/payments_darwin-arm64.tar.gz"
-      sha256 "8865f1936c1d995328e2bbfe0b3b6af80c1afe39a5514f85c33b6fd0b98916a9"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/payments/releases/download/v0.4.1/payments_darwin-amd64.tar.gz"
+      sha256 "a3027547d4cc61347a4206b57629f24e39d158c517f6b457b995e2ff66808a22"
 
       def install
         bin.install "payments"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.0/payments_darwin-amd64.tar.gz"
-      sha256 "05e800aa255773b9959b43306ed9a53407ab530615bd6f1a2b8d470ec6704574"
+    if Hardware::CPU.arm?
+      url "https://github.com/formancehq/payments/releases/download/v0.4.1/payments_darwin-arm64.tar.gz"
+      sha256 "61a8589cd681e6479bae2f0de688a8b45ad1de2d7a0b2cd1c492b4074684c641"
 
       def install
         bin.install "payments"
@@ -28,16 +28,16 @@ class Payments < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.0/payments_linux-arm64.tar.gz"
-      sha256 "31fa3dc341e9b3f4e30a756ec12454f5428b871735b3e08bec6f10b03f2e58c9"
+      url "https://github.com/formancehq/payments/releases/download/v0.4.1/payments_linux-arm64.tar.gz"
+      sha256 "326e7d5d508b47fde4ef5e50195dbc7d30b7fe0c7b1c988965d9e72e2a03075e"
 
       def install
         bin.install "payments"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.0/payments_linux-amd64.tar.gz"
-      sha256 "33b772ae27120f04d3fe0f5be793471458bdfaad42eba74a7428466952ddf076"
+      url "https://github.com/formancehq/payments/releases/download/v0.4.1/payments_linux-amd64.tar.gz"
+      sha256 "9ac93a4422764d4d3d1ebb0bbd9e6b4c4c5fb12ff98a67469059e20190fc2319"
 
       def install
         bin.install "payments"
