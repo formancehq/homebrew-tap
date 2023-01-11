@@ -5,20 +5,20 @@
 class Payments < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.4.3"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.3/payments_darwin-arm64.tar.gz"
-      sha256 "fdcf9230aac2ca9323825a631ee7d0b5eafd3c7dccd019c1aac0767b1d09f2f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/payments/releases/download/v0.5.0/payments_darwin-amd64.tar.gz"
+      sha256 "eba368f70858f9159bafc03bb141b769d776ec30d25edd0e2f41a05a500d59d2"
 
       def install
         bin.install "payments"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.3/payments_darwin-amd64.tar.gz"
-      sha256 "92087575657f8339b03443975d2657b184fe02b3c848074eb8cf6f31f0805121"
+    if Hardware::CPU.arm?
+      url "https://github.com/formancehq/payments/releases/download/v0.5.0/payments_darwin-arm64.tar.gz"
+      sha256 "afc45e0a63d7cbc913d9a1d870539ee99ead7dda966d053a396b86d8c23f2899"
 
       def install
         bin.install "payments"
@@ -27,17 +27,17 @@ class Payments < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.3/payments_linux-amd64.tar.gz"
-      sha256 "a0332c32ea39679b83059bf2b55183640f78eea28c414597399b603b34a3fdb3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/payments/releases/download/v0.5.0/payments_linux-arm64.tar.gz"
+      sha256 "8e8088b7afacd6be95da1cb590d1189f3a2d7ab8e532e9b2074c690aed110111"
 
       def install
         bin.install "payments"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/payments/releases/download/v0.4.3/payments_linux-arm64.tar.gz"
-      sha256 "b213fcf23c4844f50e1769fbc264b0d24566446c606cd7a2602c6f4e66c0f114"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/payments/releases/download/v0.5.0/payments_linux-amd64.tar.gz"
+      sha256 "0ced33d629c8da05c40bdfb394a5cb257c70adfdac13908f1061e96a35937449"
 
       def install
         bin.install "payments"
