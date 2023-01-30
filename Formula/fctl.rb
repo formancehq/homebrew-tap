@@ -5,20 +5,20 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.7.1"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/fctl/releases/download/v0.7.1/fctl_darwin-arm64.tar.gz"
-      sha256 "cc301a05f0c827abdf26425c6571f6d2c689ec1fd3999d3eed5f7d384a09b2f4"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.8.0/fctl_darwin-arm64.tar.gz"
+      sha256 "9f15b29107ea0cfecb195105591e2ad928b558cd607177f489c3958a95469571"
 
       def install
         bin.install "fctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.7.1/fctl_darwin-amd64.tar.gz"
-      sha256 "865aa182097596df2edc7c15e22d92f0fc0d57d80bafc2f65d3320c18f168d77"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.8.0/fctl_darwin-amd64.tar.gz"
+      sha256 "9bcabe16a070703bafc2651c42eba7fb5ef037ef3e83d1a3150a1d9ea47e2bfc"
 
       def install
         bin.install "fctl"
@@ -28,16 +28,16 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v0.7.1/fctl_linux-amd64.tar.gz"
-      sha256 "2df5a372092a12e9efc5913b57558a18c72e4476e76688583bbe0b2d6e1d1693"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.8.0/fctl_linux-amd64.tar.gz"
+      sha256 "dff14c375d10c02fdc94648da8c9a353a47b37a58eeeb88860683b4d472128ee"
 
       def install
         bin.install "fctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/fctl/releases/download/v0.7.1/fctl_linux-arm64.tar.gz"
-      sha256 "a8f3fbea49413c33a1da227a79e337bbde8ead84aa668e648ebef5a2525b1fbe"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.8.0/fctl_linux-arm64.tar.gz"
+      sha256 "d74df402e2d9eb7f702692ba98595fdbb368863c367a455b84881b7fe20ec736"
 
       def install
         bin.install "fctl"
