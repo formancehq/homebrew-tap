@@ -5,39 +5,21 @@
 class Numary < Formula
   desc ""
   homepage "https://formance.com"
-  version "1.8.1"
+  version "1.9.0"
+  depends_on :macos
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.8.1/numary_1.8.1_macOS-64bit.tar.gz"
-      sha256 "338a1727c4b5c54319b28b6d9cd9527eee95998587a45bb15a9916f858c4db8d"
-
-      def install
-        bin.install "numary"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v1.8.1/numary_1.8.1_macOS-ARM64.tar.gz"
-      sha256 "697e93f2b01e05ad79674320aa53bf98f92d7c5a0859dd416367227c6bc56357"
-
-      def install
-        bin.install "numary"
-      end
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v1.8.1/numary_1.8.1_Linux-ARM64.tar.gz"
-      sha256 "5f76b566d4de183c168e676a4d03ef6840ff34fdc562a301293ec64773354515"
+      url "https://github.com/formancehq/ledger/releases/download/v1.9.0/numary_1.9.0_macOS-ARM64.tar.gz"
+      sha256 "e23eb7bbaf11b5fe12fad85b2e77a7d9325e878685355071b555e0bd5259627c"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.8.1/numary_1.8.1_Linux-64bit.tar.gz"
-      sha256 "73e339d84b932823c9c2cce9abac6e175fc095a5caf2c11f20059bc98f1de8a8"
+      url "https://github.com/formancehq/ledger/releases/download/v1.9.0/numary_1.9.0_macOS-64bit.tar.gz"
+      sha256 "aeb85bf444dd9b2a402354b37394bdc965fd7899439023cabfaa997f79cc7b29"
 
       def install
         bin.install "numary"
