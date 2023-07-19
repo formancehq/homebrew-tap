@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.11.2"
+  version "0.11.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.2/fctl_darwin-arm64.tar.gz"
-      sha256 "c4a23ecff7b24156aceeaa164a764719746fd2d23e4d316dcea36defe97902fc"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.3/fctl_darwin-arm64.tar.gz"
+      sha256 "411ae1a1c461d6cc8445431cd5a14c91d4156f7da22c059cfb0120512da8b191"
 
       def install
         bin.install "fctl"
@@ -20,8 +20,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.2/fctl_darwin-amd64.tar.gz"
-      sha256 "2eaff8287279f4744f14874f4f36af13e5472c651cef16f49e42ec97a60b14cf"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.3/fctl_darwin-amd64.tar.gz"
+      sha256 "9ec3a865ec1a53be48b2daaa646753c097465ab64d81a50b623279a306714744"
 
       def install
         bin.install "fctl"
@@ -34,8 +34,8 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.2/fctl_linux-arm64.tar.gz"
-      sha256 "12003011ac225d12fcc39c4a91113c7e8b1529591cf63715fb76df6b03539381"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.3/fctl_linux-arm64.tar.gz"
+      sha256 "473d2c1f952491795002be4b694cb4bc5a2d7bd2608384b7a8e9f05ea013a36d"
 
       def install
         bin.install "fctl"
@@ -45,8 +45,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.2/fctl_linux-amd64.tar.gz"
-      sha256 "9b27c859fc7e1e977b514b2f4bf299818a2d8a0b4fbf57d72b4f6c38f5839de6"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.11.3/fctl_linux-amd64.tar.gz"
+      sha256 "ae79c5bb1eb0837fb39e4a8219cc3a7386d3d49b9c1367e207a878ed26174beb"
 
       def install
         bin.install "fctl"
