@@ -5,21 +5,21 @@
 class Numary < Formula
   desc ""
   homepage "https://formance.com"
-  version "1.10.11"
+  version "1.10.12"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v1.10.11/numary_Darwin_arm64.tar.gz"
-      sha256 "34564e957bc77878400c4779b395f8990d9f49642ee8940a56f7577b281f0854"
+      url "https://github.com/formancehq/ledger/releases/download/v1.10.12/numary_Darwin_arm64.tar.gz"
+      sha256 "0baac932f1ddeb41107ac505075294888904687b6c18fc09089b1fcb85df2829"
 
       def install
         bin.install "numary"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v1.10.11/numary_Darwin_x86_64.tar.gz"
-      sha256 "6d5bb9c25ebe7290c30286ca5aafe258d1e2d04cbe7f25ada06cd89ce11e6bb0"
+      url "https://github.com/formancehq/ledger/releases/download/v1.10.12/numary_Darwin_x86_64.tar.gz"
+      sha256 "b47794c434941ee2711c3159fcee7fba641bd37e56b2f4a043df641dc3e9d831"
 
       def install
         bin.install "numary"
