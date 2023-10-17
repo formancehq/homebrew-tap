@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "0.12.0"
+  version "0.12.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.0/fctl_darwin-arm64.tar.gz"
-      sha256 "235d33053f4f96253d6e0be75bb583f278725697d9e201e7af274c7149be6e05"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.1/fctl_darwin-arm64.tar.gz"
+      sha256 "c79ada5c29f66c6921eadcf57e5641276256259a89ff1a37781fc1fb0a85381a"
 
       def install
         bin.install "fctl"
@@ -20,8 +20,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.0/fctl_darwin-amd64.tar.gz"
-      sha256 "370dfcf97cf39f2588dfa2aefdacc6a35b98128437119f94c58f9a8475f819cb"
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.1/fctl_darwin-amd64.tar.gz"
+      sha256 "3ac1858b3179406ae7d8f958fe57a890072c55d185a0c6990c792adc4a85d39c"
 
       def install
         bin.install "fctl"
@@ -33,9 +33,9 @@ class Fctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.0/fctl_linux-amd64.tar.gz"
-      sha256 "31e1465bccc9cb3ccc308e5c4d2f1c68b31fcb22823c91c84a337af376b62cfb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.1/fctl_linux-arm64.tar.gz"
+      sha256 "765d5a67d0547d3a58bc9604436407d666cdee0d8efd1e45168653fbb13eaca6"
 
       def install
         bin.install "fctl"
@@ -44,9 +44,9 @@ class Fctl < Formula
         fish_completion.install "completions/fctl.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.0/fctl_linux-arm64.tar.gz"
-      sha256 "7eeb2524afc2da88298671b0b9eb2457425141c26d4c7788adbed40f01217328"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/stack/releases/download/components/fctl/v0.12.1/fctl_linux-amd64.tar.gz"
+      sha256 "c676930e15bee566b3e7e4bca869735b67f8471f8b384f5aa34734bcde193426"
 
       def install
         bin.install "fctl"
