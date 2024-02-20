@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.0.0-rc.8"
+  version "2.0.0-rc.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.8/fctl_darwin-arm64.tar.gz"
-      sha256 "43660215dc4e613e8c09b1533182c4569e9cc6449e6fd8be2901f50104111b07"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.9/fctl_darwin-arm64.tar.gz"
+      sha256 "7d99823d67f1453414f08b1ae69190e77bcec46adce4fb4e4a03317301fee435"
 
       def install
         bin.install "fctl"
@@ -20,8 +20,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.8/fctl_darwin-amd64.tar.gz"
-      sha256 "9aca796529a6711368bc1f72b86adaba39081498595490bdda24d006ca8686d4"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.9/fctl_darwin-amd64.tar.gz"
+      sha256 "5dcfbbc68c6c80fe158be97a8e169a8eecadd72078c1e300a6a6a9b93fba6621"
 
       def install
         bin.install "fctl"
@@ -34,8 +34,8 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.8/fctl_linux-amd64.tar.gz"
-      sha256 "08471bfbacf93136b1d88457fe014c74889a4b52a9f9f1ce4c8cec68e9fefd4c"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.9/fctl_linux-amd64.tar.gz"
+      sha256 "17290debb09f5e90dbf8bbda7c0354eae5d05503f4bd915fc07ca94a7eb9c8b4"
 
       def install
         bin.install "fctl"
@@ -45,8 +45,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.8/fctl_linux-arm64.tar.gz"
-      sha256 "dace2cf555977c83cde58fc11a08567bc3715b47d70b34dd7a63c0574f34c4c8"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.0-rc.9/fctl_linux-arm64.tar.gz"
+      sha256 "9d1148d4402134eb43dedd80066e8bc8f8c46ba0e019ec38dc4e17acfb6b91d5"
 
       def install
         bin.install "fctl"
