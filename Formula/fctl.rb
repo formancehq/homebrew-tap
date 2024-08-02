@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.0.5"
+  version "2.0.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.5/fctl_darwin-arm64.tar.gz"
-      sha256 "f03f419f07fad7f70ad6b4983add45681d36cd0b6bd29eed3be1e078e21fa492"
+    if Hardware::CPU.intel?
+      url "https://github.com/formancehq/stack/releases/download/v2.0.6/fctl_darwin-amd64.tar.gz"
+      sha256 "36a4ae2a2d8c4e0a5cf9eb715dd5d9691249bf065a3372e3aae5282ac06b8765"
 
       def install
         bin.install "fctl"
@@ -19,9 +19,9 @@ class Fctl < Formula
         fish_completion.install "completions/fctl.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.5/fctl_darwin-amd64.tar.gz"
-      sha256 "4eafe7dbe2e6135807540364b279a1f3198ef76dca20d3d0d54a1394c3391e58"
+    if Hardware::CPU.arm?
+      url "https://github.com/formancehq/stack/releases/download/v2.0.6/fctl_darwin-arm64.tar.gz"
+      sha256 "a264d60d9dee422c2c4c4b5123d87346605f3fb2578c93c2d5f7f649ebf2968a"
 
       def install
         bin.install "fctl"
@@ -34,8 +34,8 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.5/fctl_linux-arm64.tar.gz"
-      sha256 "ae94a12d76f2631604d22fe0bec7c9b4c22bb47e7b10b5bedfacbf11721de276"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.6/fctl_linux-arm64.tar.gz"
+      sha256 "65f887ec80be036e45460fbc087b18c18ad64ee17a43fec381d5dac4d104ea52"
 
       def install
         bin.install "fctl"
@@ -45,8 +45,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.5/fctl_linux-amd64.tar.gz"
-      sha256 "7e0e7d4d9399e9e30b4ff966d0ccf75f0019492a3c7c63b1e576371ae13c1508"
+      url "https://github.com/formancehq/stack/releases/download/v2.0.6/fctl_linux-amd64.tar.gz"
+      sha256 "e1de83dd680da106ee7670301c11e27e9b79e3f1e90152efbf04cfe122c077a1"
 
       def install
         bin.install "fctl"
