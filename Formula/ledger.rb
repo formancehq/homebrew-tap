@@ -5,13 +5,13 @@
 class Ledger < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.1.0-rc.1"
+  version "2.1.0"
   depends_on :linux
 
   on_intel do
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.1.0-rc.1/ledger_linux-amd64.tar.gz"
-      sha256 "9b864b1df4dc98104c6b28d339999695a52e94bf8da5ed5826bab523e1a4cefa"
+      url "https://github.com/formancehq/ledger/releases/download/v2.1.0/ledger_linux-amd64.tar.gz"
+      sha256 "6966b9c29aa7197fab1d239a056807fd9b20a9d13c020b07953f163a2321f21a"
 
       def install
         bin.install "ledger"
@@ -20,8 +20,8 @@ class Ledger < Formula
   end
   on_arm do
     if Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.1.0-rc.1/ledger_linux-arm64.tar.gz"
-      sha256 "1ec92343b60d40d0ac5c1dac1b146c78f53d46c0d556dda7ed6eefb729eb8bcb"
+      url "https://github.com/formancehq/ledger/releases/download/v2.1.0/ledger_linux-arm64.tar.gz"
+      sha256 "a676f6a0cdfa4039e7634c38d79632ac152c2a908748f4a45daacb826439817a"
 
       def install
         bin.install "ledger"
