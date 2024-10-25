@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.0.20"
+  version "2.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.20/fctl_darwin-arm64.tar.gz"
-      sha256 "7b1fdde9bab8f1a57fb5f0eaf079aa9d2dc5141b1caacc8830f07a24bb00611b"
+    on_intel do
+      url "https://github.com/formancehq/fctl/releases/download/v2.1.0/fctl_darwin-amd64.tar.gz"
+      sha256 "1f1d52321731fb7fbf8cd7759f172434571bb0307a32f7d0c5ce66a6ad757eb4"
 
       def install
         bin.install "fctl"
@@ -19,9 +19,9 @@ class Fctl < Formula
         fish_completion.install "completions/fctl.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.20/fctl_darwin-amd64.tar.gz"
-      sha256 "b01befc80fc4f22f161ddbdeb2519a22190ad338a4341d690e0f70d624c8b9f8"
+    on_arm do
+      url "https://github.com/formancehq/fctl/releases/download/v2.1.0/fctl_darwin-arm64.tar.gz"
+      sha256 "79866e1fa5221624d102100048c37bb2faea77dcc06f95819fa4060840e855cb"
 
       def install
         bin.install "fctl"
@@ -33,26 +33,30 @@ class Fctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.20/fctl_linux-arm64.tar.gz"
-      sha256 "73b4443bb39a43b84fbd783bed6c49e4a9f1fae57933f0a0e08a0ee4a784990a"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/formancehq/fctl/releases/download/v2.1.0/fctl_linux-amd64.tar.gz"
+        sha256 "e400e1de1539b366f2efbfbdbc731608347add05bafc95a4ba7602f5e2bddd95"
 
-      def install
-        bin.install "fctl"
-        bash_completion.install "completions/fctl.bash" => "fctl"
-        zsh_completion.install "completions/fctl.zsh" => "_fctl"
-        fish_completion.install "completions/fctl.fish"
+        def install
+          bin.install "fctl"
+          bash_completion.install "completions/fctl.bash" => "fctl"
+          zsh_completion.install "completions/fctl.zsh" => "_fctl"
+          fish_completion.install "completions/fctl.fish"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/formancehq/stack/releases/download/v2.0.20/fctl_linux-amd64.tar.gz"
-      sha256 "09056a3de7ce4a6a224ca2af4c3d11327e172ac7f4592af551377882d0d82e77"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/formancehq/fctl/releases/download/v2.1.0/fctl_linux-arm64.tar.gz"
+        sha256 "484f638dea242af3215c38e5855de5b0b083068707881cfd53cb716bab775348"
 
-      def install
-        bin.install "fctl"
-        bash_completion.install "completions/fctl.bash" => "fctl"
-        zsh_completion.install "completions/fctl.zsh" => "_fctl"
-        fish_completion.install "completions/fctl.fish"
+        def install
+          bin.install "fctl"
+          bash_completion.install "completions/fctl.bash" => "fctl"
+          zsh_completion.install "completions/fctl.zsh" => "_fctl"
+          fish_completion.install "completions/fctl.fish"
+        end
       end
     end
   end
