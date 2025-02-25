@@ -5,46 +5,26 @@
 class LedgerAT2 < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.2.4"
+  version "2.1.6"
+  depends_on :linux
 
-  on_macos do
-    on_intel do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.4/ledger_darwin-amd64.tar.gz"
-      sha256 "8b6353b615b4232928abb8f7cd96aa4f3de965b72298d3ca59c8e705be2f6f7a"
-
-      def install
-        bin.install "ledger"
-      end
-    end
-    on_arm do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.4/ledger_darwin-arm64.tar.gz"
-      sha256 "3d0fd4d959168af1aba59ceaed44727626e2f8bb610bd1a0bcd5eb8cba5bfde8"
+  on_intel do
+    if Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/ledger/releases/download/v2.1.6/ledger_linux-amd64.tar.gz"
+      sha256 "7af5b3bd52162f701269f6468c56d3a303afcf5d89a1e4ce9d5e6bc06f1c905e"
 
       def install
         bin.install "ledger"
       end
     end
   end
+  on_arm do
+    if Hardware::CPU.is_64_bit?
+      url "https://github.com/formancehq/ledger/releases/download/v2.1.6/ledger_linux-arm64.tar.gz"
+      sha256 "ebb8f0b5d8b1112ed4203dae76af5811416a56ff2561218f73d42ad855ab285a"
 
-  on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.4/ledger_linux-amd64.tar.gz"
-        sha256 "a396e05cebb99e55da519704a13ac50f74e86662809fdf7a63368cafdeef1e2b"
-
-        def install
-          bin.install "ledger"
-        end
-      end
-    end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.4/ledger_linux-arm64.tar.gz"
-        sha256 "61805661f07f00098315c78eb9197b97dba1e2d23c5ea24827b2aec735f01035"
-
-        def install
-          bin.install "ledger"
-        end
+      def install
+        bin.install "ledger"
       end
     end
   end
