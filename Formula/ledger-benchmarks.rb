@@ -5,20 +5,20 @@
 class LedgerBenchmarks < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.2.14"
+  version "2.2.15"
 
   on_macos do
     on_intel do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.14/ledger_darwin-amd64.tar.gz"
-      sha256 "6e9f815f40b82a1e0ad02407f5594c400a6e8ac0bf05d1ddef031dfbb81bb2b6"
+      url "https://github.com/formancehq/ledger/releases/download/v2.2.15/ledger_darwin-amd64.tar.gz"
+      sha256 "f2ad1202995fc9a21617442287069d235c7b48d5be5059dedb9188138c7fd929"
 
       def install
         bin.install "ledger-benchmarks"
       end
     end
     on_arm do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.14/ledger_darwin-arm64.tar.gz"
-      sha256 "f44ded6dbe75b1b27308fa2a440334e6dcbb16c70ad683c608a8ef7f86f8f0b0"
+      url "https://github.com/formancehq/ledger/releases/download/v2.2.15/ledger_darwin-arm64.tar.gz"
+      sha256 "96cefe8a76631cdffd207e36bab883634a720918f17ed433ff04f9e971855875"
 
       def install
         bin.install "ledger-benchmarks"
@@ -29,8 +29,8 @@ class LedgerBenchmarks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.14/ledger_linux-amd64.tar.gz"
-        sha256 "12d31b5d072d09d148fafd028fd1813cfa9ac512c2a6ae240ce848fa8be5451e"
+        url "https://github.com/formancehq/ledger/releases/download/v2.2.15/ledger_linux-amd64.tar.gz"
+        sha256 "6bc51787cb357dfae9bd4bb56bae25096acaeb380adc0fff66de1aa72ee5ffa4"
 
         def install
           bin.install "ledger-benchmarks"
@@ -39,8 +39,8 @@ class LedgerBenchmarks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.14/ledger_linux-arm64.tar.gz"
-        sha256 "a0cae93c3ab22368380231428b23d076672d703fc46ea083b626516afd323727"
+        url "https://github.com/formancehq/ledger/releases/download/v2.2.15/ledger_linux-arm64.tar.gz"
+        sha256 "ae6eb4517ba4515ae7da8db23d3613aa02c1d9be69429f89b8c9e0418e0ee7f9"
 
         def install
           bin.install "ledger-benchmarks"
