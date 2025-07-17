@@ -5,20 +5,20 @@
 class LedgerAT2 < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.2.45"
+  version "2.2.46"
 
   on_macos do
     on_intel do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.45/ledger_darwin-amd64.tar.gz"
-      sha256 "6c007a749960dbd2793a384a5b5d2e940e3e962c2f5337f8d739c25dcabcecdd"
+      url "https://github.com/formancehq/ledger/releases/download/v2.2.46/ledger_darwin-amd64.tar.gz"
+      sha256 "a42ee57476640862785e4ee33b2552f19e51a0afcb9d0b6c90cb6c0d3a0f46a3"
 
       def install
         bin.install "ledger"
       end
     end
     on_arm do
-      url "https://github.com/formancehq/ledger/releases/download/v2.2.45/ledger_darwin-arm64.tar.gz"
-      sha256 "3515118e87e2f522107dbd9ce3bd7e8c112b4c0487930f475861ad5848e6da68"
+      url "https://github.com/formancehq/ledger/releases/download/v2.2.46/ledger_darwin-arm64.tar.gz"
+      sha256 "c779fb3934d3623925d8b16a153e0da4b29bccca8b59608a17f5dd97eda07468"
 
       def install
         bin.install "ledger"
@@ -29,8 +29,8 @@ class LedgerAT2 < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.45/ledger_linux-amd64.tar.gz"
-        sha256 "a866f14b5f9e4c4e583a67271145777f883158d401d3e252ab7d348083489351"
+        url "https://github.com/formancehq/ledger/releases/download/v2.2.46/ledger_linux-amd64.tar.gz"
+        sha256 "18e7f6735bcb529fee80fa155beb686c283012679a3e00a14f56b81d3c619486"
 
         def install
           bin.install "ledger"
@@ -39,8 +39,8 @@ class LedgerAT2 < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/formancehq/ledger/releases/download/v2.2.45/ledger_linux-arm64.tar.gz"
-        sha256 "5e9bfc784a74d732a5a20599846de85d005daf1877a24ec111e70ac8fd1b4355"
+        url "https://github.com/formancehq/ledger/releases/download/v2.2.46/ledger_linux-arm64.tar.gz"
+        sha256 "2c7e7d1deea408a14a0db1f9a6325c54c56eef4c2cafd713cfdc864ebc4caf44"
 
         def install
           bin.install "ledger"
