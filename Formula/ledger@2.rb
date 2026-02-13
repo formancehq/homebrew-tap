@@ -5,20 +5,20 @@
 class LedgerAT2 < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.3.12"
+  version "2.3.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.12/ledger_darwin-amd64.tar.gz"
-      sha256 "0d9b995b5336ec73448b0d52304e948c5bce874b283a97fc03681561da1eedc2"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.13/ledger_darwin-amd64.tar.gz"
+      sha256 "737ddcb676500ce4b1249f49401cba519415f9035d6f3a52bc862906caf0b648"
 
       def install
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.12/ledger_darwin-arm64.tar.gz"
-      sha256 "44f898c35eb5d18012cefe4330046f88e4899175d56059d5c081bce3c11290c3"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.13/ledger_darwin-arm64.tar.gz"
+      sha256 "b2d8d24fc80fe9b5deca64f569fcafe1b6b69584770fa53034ade47995c14081"
 
       def install
         bin.install "ledger"
@@ -28,15 +28,15 @@ class LedgerAT2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.12/ledger_linux-amd64.tar.gz"
-      sha256 "d64245226c87f9567e170179a8185cae365bd3b628792f932ed6bb2fbd511282"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.13/ledger_linux-amd64.tar.gz"
+      sha256 "98cab11ce6ade3ad02c07fceafa46557b0112af30b96a9139927e0ba96a74608"
       def install
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.12/ledger_linux-arm64.tar.gz"
-      sha256 "998a41cab8d832e121d731c3b2af8018be683bcf62cd8269b1a19154917de107"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.13/ledger_linux-arm64.tar.gz"
+      sha256 "9b6c48d1890df9be6caa25f805bbaaf0bbe3d4f93c6eadb5d8a2fc894147cc4e"
       def install
         bin.install "ledger"
       end
