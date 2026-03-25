@@ -5,22 +5,22 @@
 class Ledger < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.3.17"
+  version "2.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.17/ledger_darwin-amd64.tar.gz"
-      sha256 "672020986503dac8c4013f244b62cb88386c67387bc09f0709e61f7ee7119657"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.2/ledger_darwin-amd64.tar.gz"
+      sha256 "20609becfbee037df4ccd34e16e6d2a56b59f9c23d7bd8a65efcab6a8d519d03"
 
-      define_method(:install) do
+      def install
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.17/ledger_darwin-arm64.tar.gz"
-      sha256 "d98e0c622303eb6729a851c9a68633029c6c860386ba0d869f5f7c8901f21dc7"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.2/ledger_darwin-arm64.tar.gz"
+      sha256 "e751f39878ab4f3543ccc9c7b69c982d9d8b2073dfcf31f16e1a94f265205635"
 
-      define_method(:install) do
+      def install
         bin.install "ledger"
       end
     end
@@ -28,16 +28,16 @@ class Ledger < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.17/ledger_linux-amd64.tar.gz"
-      sha256 "8c4a9defb3cf0307f9889b43e91565ef935ad4a8085d1158ce33a93036bdc68b"
-      define_method(:install) do
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.2/ledger_linux-amd64.tar.gz"
+      sha256 "031d5e2a6f8b63c1e0b7f64a8d9805a7b26240a721aee7f8a6134637ce041c02"
+      def install
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.17/ledger_linux-arm64.tar.gz"
-      sha256 "286d4bbf5f861b7f1497ce58c86dd95384495bf9be0d989ee4298821c5311614"
-      define_method(:install) do
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.2/ledger_linux-arm64.tar.gz"
+      sha256 "5ee5938f76411055d38c9fd47cc0a7e160d1ce1fb884fd545e4276715997ba51"
+      def install
         bin.install "ledger"
       end
     end
