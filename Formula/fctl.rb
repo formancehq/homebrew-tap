@@ -5,12 +5,12 @@
 class Fctl < Formula
   desc ""
   homepage "https://formance.com"
-  version "3.3.0"
+  version "3.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/fctl/releases/download/v3.3.0/fctl_darwin-amd64.tar.gz"
-      sha256 "f6728a71a0acb4bbe43691023fc1b8b3a188aa6bc4c73e1ccb834e23f3f72216"
+      url "https://github.com/formancehq/fctl/releases/download/v3.4.0/fctl_darwin-amd64.tar.gz"
+      sha256 "beaba51122c548ae305d560c2092d3bbef98af660f34d31d1e1be160410fea9a"
 
       define_method(:install) do
         bin.install "fctl"
@@ -20,8 +20,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/fctl/releases/download/v3.3.0/fctl_darwin-arm64.tar.gz"
-      sha256 "6f03072a8be34430f05f6f96eab85388ddbb6a710a357d3f81e6185f732cb1e2"
+      url "https://github.com/formancehq/fctl/releases/download/v3.4.0/fctl_darwin-arm64.tar.gz"
+      sha256 "64f7581e2011b137f33a5d8406841c7ebe1987c0774090d1fdcc00e85561526f"
 
       define_method(:install) do
         bin.install "fctl"
@@ -34,8 +34,8 @@ class Fctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/fctl/releases/download/v3.3.0/fctl_linux-amd64.tar.gz"
-      sha256 "4a235ffb5468dce0602e05249fe4fb381857e366e56d4d16bafa8e6b673c617c"
+      url "https://github.com/formancehq/fctl/releases/download/v3.4.0/fctl_linux-amd64.tar.gz"
+      sha256 "3712fb049e8d39479fb2f69324eeedf592287af70b1a507fbe62cf334c8773e7"
       define_method(:install) do
         bin.install "fctl"
         bash_completion.install "completions/fctl.bash" => "fctl"
@@ -44,8 +44,8 @@ class Fctl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/fctl/releases/download/v3.3.0/fctl_linux-arm64.tar.gz"
-      sha256 "0772f6d0391f3f867e119948670129ce050d686793a9cae2a7de031da4eec735"
+      url "https://github.com/formancehq/fctl/releases/download/v3.4.0/fctl_linux-arm64.tar.gz"
+      sha256 "56e07d5829edc8403d2a7728c6d1b151d9b0adacd960c83743cfd0dfde7b3fe0"
       define_method(:install) do
         bin.install "fctl"
         bash_completion.install "completions/fctl.bash" => "fctl"
