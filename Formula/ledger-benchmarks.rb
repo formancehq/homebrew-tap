@@ -5,22 +5,22 @@
 class LedgerBenchmarks < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.4.11"
+  version "2.3.21"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v2.4.11/ledger_darwin-amd64.tar.gz"
-      sha256 "b5be205ebd4f07f64be7ff04627e7ca0e2de69362d621165ab09f9c75ad86991"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.21/ledger_darwin-amd64.tar.gz"
+      sha256 "ba99d6aad2c9127abdfca02356ecdf495e1950cccef9b19b110898799d446afc"
 
-      def install
+      define_method(:install) do
         bin.install "ledger-benchmarks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v2.4.11/ledger_darwin-arm64.tar.gz"
-      sha256 "ddac81cd3bbb4ffc40be4fa259974e9c13f62debd0a9fa31e7868e52a9569b16"
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.21/ledger_darwin-arm64.tar.gz"
+      sha256 "7e3d8b2a6e51be91b0d84fb89183e508f2f268f089d1d59246a3ab4f22bfe08c"
 
-      def install
+      define_method(:install) do
         bin.install "ledger-benchmarks"
       end
     end
@@ -28,16 +28,16 @@ class LedgerBenchmarks < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.4.11/ledger_linux-amd64.tar.gz"
-      sha256 "b7ed55a2fb6138b1157e8841f7cf6ca7b572003ff02e795dd843137a159fc579"
-      def install
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.21/ledger_linux-amd64.tar.gz"
+      sha256 "0b16ac22d42e34b329796654c6d9eea3b9c12a6c2bbbea323e372a63cd11e7ec"
+      define_method(:install) do
         bin.install "ledger-benchmarks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.4.11/ledger_linux-arm64.tar.gz"
-      sha256 "2dc3589989e06d3ef1ce4d953e1992afa8364755c8906b3350257311e8dc90b2"
-      def install
+      url "https://github.com/formancehq/ledger/releases/download/v2.3.21/ledger_linux-arm64.tar.gz"
+      sha256 "b442cc9169824376bcadc9144afb34fed4cb459fec31ff07cceeedc3769eae61"
+      define_method(:install) do
         bin.install "ledger-benchmarks"
       end
     end
