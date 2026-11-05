@@ -5,20 +5,20 @@
 class Ledger < Formula
   desc ""
   homepage "https://formance.com"
-  version "2.3.24"
+  version "2.4.18"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.24/ledger_darwin-amd64.tar.gz"
-      sha256 "8ea59a73d598c64f9f3fc19b7292fe4fb87cda60e3996c89a02261203be53c80"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.18/ledger_darwin-amd64.tar.gz"
+      sha256 "296696eae628295eef7e0516695828375de7b9ed9c98993273e1cc3531a8f2ea"
 
       define_method(:install) do
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.24/ledger_darwin-arm64.tar.gz"
-      sha256 "4f6b591ad1cc410e1b9aed9ab4f95df667010d659c264d47b1057399143f6c2e"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.18/ledger_darwin-arm64.tar.gz"
+      sha256 "437435807d116c9b41371777cf6ad9de1158c4965ce3b6a4abeee83a52bae8bf"
 
       define_method(:install) do
         bin.install "ledger"
@@ -28,15 +28,15 @@ class Ledger < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.24/ledger_linux-amd64.tar.gz"
-      sha256 "07207aeffa43ba804cc52076546c881f2859284ada819173d9337abf7b327860"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.18/ledger_linux-amd64.tar.gz"
+      sha256 "e72d01eddab08a2799270f0719bafc6acb844fdfb5fd45471522b13700ae6daa"
       define_method(:install) do
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/formancehq/ledger/releases/download/v2.3.24/ledger_linux-arm64.tar.gz"
-      sha256 "8665dc4332cbd3e506afd631b32b60e218823fad56bc464ef14853c8f44386b2"
+      url "https://github.com/formancehq/ledger/releases/download/v2.4.18/ledger_linux-arm64.tar.gz"
+      sha256 "baa07969b23f3bf4073cdf7f8e4f51d5fdf9bda5afda2bfe0340673ec2346463"
       define_method(:install) do
         bin.install "ledger"
       end
