@@ -5,12 +5,12 @@
 class FctlAT3 < Formula
   desc ""
   homepage "https://formance.com"
-  version "3.9.0"
+  version "3.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://brew.formance.com/v3.9.0/fctl_darwin-amd64.tar.gz"
-      sha256 "4e9c124909a7a0a0caa8ba7ded2afa8c08d88d0907c5aea8c2e56d693315a94c"
+      url "https://brew.formance.com/v3.10.0/fctl_darwin-amd64.tar.gz"
+      sha256 "fcf1d9dbbf55cbff0961a7263a39cbbd426ab0a1a53776effe8c6f8f21d88fd9"
 
       define_method(:install) do
         bin.install "fctl"
@@ -20,8 +20,8 @@ class FctlAT3 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://brew.formance.com/v3.9.0/fctl_darwin-arm64.tar.gz"
-      sha256 "0e4d5a79f49672608e8b0b345cb048bb68c60851118f5b75d79c27433935e53a"
+      url "https://brew.formance.com/v3.10.0/fctl_darwin-arm64.tar.gz"
+      sha256 "7a130dc7ddf4660f880bf87bf4d48e047919cc35eb767e468854416063a54884"
 
       define_method(:install) do
         bin.install "fctl"
@@ -34,8 +34,8 @@ class FctlAT3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://brew.formance.com/v3.9.0/fctl_linux-amd64.tar.gz"
-      sha256 "ca477fdc3a21a4214d455b394e77f1266460b35523f1294ff03f63515d8d15aa"
+      url "https://brew.formance.com/v3.10.0/fctl_linux-amd64.tar.gz"
+      sha256 "f0b3e9a8b79f9287f9e863edd005bd974c9f989c0e4ce6d2f850e46ffd2c6d26"
       define_method(:install) do
         bin.install "fctl"
         bash_completion.install "completions/fctl.bash" => "fctl"
@@ -44,8 +44,8 @@ class FctlAT3 < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://brew.formance.com/v3.9.0/fctl_linux-arm64.tar.gz"
-      sha256 "07bf038afc5e1ae287fa84396cf76a8e2e571297de7c66b57470be08e4981cff"
+      url "https://brew.formance.com/v3.10.0/fctl_linux-arm64.tar.gz"
+      sha256 "985b4ace38a053fbfed087005a36d2ac57e86f7606934e66dc0fa921bd78a61c"
       define_method(:install) do
         bin.install "fctl"
         bash_completion.install "completions/fctl.bash" => "fctl"
@@ -57,19 +57,19 @@ class FctlAT3 < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      mirror "https://github.com/formancehq/fctl/releases/download/v3.9.0/fctl_darwin-amd64.tar.gz"
+      mirror "https://github.com/formancehq/fctl/releases/download/v3.10.0/fctl_darwin-amd64.tar.gz"
     end
     if Hardware::CPU.arm?
-      mirror "https://github.com/formancehq/fctl/releases/download/v3.9.0/fctl_darwin-arm64.tar.gz"
+      mirror "https://github.com/formancehq/fctl/releases/download/v3.10.0/fctl_darwin-arm64.tar.gz"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      mirror "https://github.com/formancehq/fctl/releases/download/v3.9.0/fctl_linux-amd64.tar.gz"
+      mirror "https://github.com/formancehq/fctl/releases/download/v3.10.0/fctl_linux-amd64.tar.gz"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      mirror "https://github.com/formancehq/fctl/releases/download/v3.9.0/fctl_linux-arm64.tar.gz"
+      mirror "https://github.com/formancehq/fctl/releases/download/v3.10.0/fctl_linux-arm64.tar.gz"
     end
   end
 
